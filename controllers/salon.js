@@ -1,6 +1,7 @@
 const salonSetup=require('../modal/salonsetup')
 
-// const getSalonDetails= async (req,res)=>{
+// const getSalonDetails= (req,res)=>{
+//     salonSetup.find()
 //     res.send('<h1>all set server started</h1>')
 // }
 const postSalonDetails= async (req,res)=>{
@@ -12,5 +13,6 @@ const postSalonDetails= async (req,res)=>{
     }
     
 }
+
 
 module.exports=postSalonDetails
