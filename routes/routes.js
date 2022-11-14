@@ -1,9 +1,10 @@
 const express=require('express')
 const router=express.Router()
 const postSalonDetails=require('../controllers/salon')
-
+const postProductDetails=require('../controllers/salon')
+const editProductDetails=require('../controllers/salon')
 router.route('/').post(postSalonDetails)
-router.route('/').get((req,res)=>{
-    res.send('<h1>get sealon</h1>')
-})
+router.route('/addproduct').post(postProductDetails)
+router.route('/addproduct/:id').patch(editProductDetails)
+
 module.exports=router

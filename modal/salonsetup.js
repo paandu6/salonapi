@@ -33,4 +33,45 @@ const salonSchema=new mongoose.Schema({
     }
 })
 
+const addProductsSchema=mongoose.Schema({
+    category:{
+        type:String,
+        require:true
+    },
+    subCategory:{
+        type:String,
+        require:true
+    },
+    productName:{
+        type:String,
+        require:true
+    },
+    brand:{
+        type:String,
+        require:true
+    },
+    displayName:{
+        type:String,
+        require:true
+    },
+    hsnCode:{
+        type:String,
+        require:true
+    },
+    productDescription:{
+        type:String,
+        require:true
+    },
+    mrp:{
+        type:Number,
+        require:true
+    },
+    salesPrice:{
+        type:Number,
+        require:true
+    }
+
+})
+
 module.exports=mongoose.model('salonSetup',salonSchema)
+module.exports=mongoose.model('productAdd',addProductsSchema)
